@@ -1,0 +1,65 @@
+/* Container for all pizza cards */
+.pizza-cards-container {
+  display: grid;
+  grid-template-columns: repeat(
+    1,
+    1fr
+  ); /* Default to 1 column on small screens */
+  gap: 20px; /* Space between the cards */
+  padding: 20px;
+}
+
+.pizza-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.pizza-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2a9d8f;
+  margin-bottom: 10px;
+}
+
+.allergens-container {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.allergen {
+  font-size: 1.2rem;
+}
+
+.no-allergens {
+  font-style: italic;
+  color: #888;
+}
+
+/* Media Query for Medium and Larger Screens */
+@media (min-width: 768px) {
+  .pizza-cards-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  .pizza-cards-container {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
+  }
+}
